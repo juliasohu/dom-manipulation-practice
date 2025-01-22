@@ -129,3 +129,17 @@ const btn = document.getElementById("button-1")
 btn.addEventListener("click", () => {
     console.log("User clicked in btn 1...")
 })
+
+//
+// Example 2: append a paragraph when clicking on btn 2
+//
+
+const btn2 = document.getElementById("button-2")
+
+btn2.addEventListener("click", () => {
+    const newP = document.createElement("p");
+    newP.innerText = "Hello I am here";
+    const parentelm = document.getElementById("box-2");
+    parentelm.appendChild(newP)
+
+})
