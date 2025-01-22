@@ -143,3 +143,36 @@ btn2.addEventListener("click", () => {
     parentelm.appendChild(newP)
 
 })
+
+// Example 3: detect keyboard events
+//
+
+document.addEventListener("keydown", (event) => {
+    if (event.code === 'Space') {
+        console.log('user pressed SPACEBAR');
+    } else if (event.code === 'ArrowLeft') {
+        console.log('user pressed arrow LEFT....');
+    } else if (event.code === 'ArrowRight') {
+        console.log('user pressed arrow RIGHT....');
+    } else if (event.code === 'ArrowUp') {
+        console.log('user pressed arrow UP....');
+    } else if (event.code === 'ArrowDown') {
+        console.log('user pressed arrow DOWN....');
+    } else {
+        console.log('user pressed other key....');
+    }
+});
+
+
+
+//
+// Attach an event listener to multiple elements
+//
+
+const allBtn = document.querySelectorAll(".btn");
+
+allBtn.forEach((btnElm) => {
+    btnElm.addEventListener("click", () => {
+        console.log("user click on one of our COOL BUTTONS...")
+    });
+});
